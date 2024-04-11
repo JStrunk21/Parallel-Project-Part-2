@@ -10,7 +10,7 @@
          BufferedReader in = null; // for reading form ServerRouter
 			InetAddress addr = InetAddress.getLocalHost();
 			String host = addr.getHostAddress(); // Server machine's IP			
-			String routerName = "j263-08.cse1.spsu.edu"; // ServerRouter host name
+			String routerName = "127.0.0.1"; // ServerRouter host name
 			int SockNum = 5555; // port number
 			
 			// Tries to connect to the ServerRouter
@@ -31,7 +31,7 @@
       	// Variables for message passing			
          String fromServer; // messages sent to ServerRouter
          String fromClient; // messages received from ServerRouter      
- 			String address ="10.5.3.196"; // destination IP (Client)
+ 			String address ="127.0.0.1"; // destination IP (Client)
 			
 			// Communication process (initial sends/receives)
 			out.println(address);// initial send (IP of the destination Client)
