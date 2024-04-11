@@ -1,16 +1,19 @@
    import java.io.*;
    import java.net.*;
+   import java.io.FileWriter;
+   import java.util.Random;
 
-    public class TCPClient {
+
+   public class TCPClient {
        public static void main(String[] args) throws IOException {
-      	
+
 			// Variables for setting up connection and communication
          Socket Socket = null; // socket to connect with ServerRouter
          PrintWriter out = null; // for writing to ServerRouter
          BufferedReader in = null; // for reading form ServerRouter
 			InetAddress addr = InetAddress.getLocalHost();
 			String host = addr.getHostAddress(); // Client machine's IP
-      	String routerName = "j263-08.cse1.spsu.edu"; // ServerRouter host name
+      	String routerName = "127.0.0.1"; // ServerRouter host name
 			int SockNum = 5555; // port number
 			
 			// Tries to connect to the ServerRouter
@@ -33,7 +36,7 @@
 			BufferedReader fromFile =  new BufferedReader(reader); // reader for the string file
          String fromServer; // messages received from ServerRouter
          String fromUser; // messages sent to ServerRouter
-			String address ="10.5.2.109"; // destination IP (Server)
+			String address ="127.0.0.1"; // destination IP (Server)
 			long t0, t1, t;
 			
 			// Communication process (initial sends/receives
